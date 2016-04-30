@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MovieDetails"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:weightSum="5"
+            >
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_width="0dp"
+                    android:text="@string/title_activity_movie_details"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="@android:style/TextAppearance.Holo.Large"
+                    android:layout_weight="4"/>
+
+                <ImageButton android:id="@+id/favorite"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/offstar"
+                    android:background="#00ffffff"
+                    android:layout_weight="1"
+                    android:onClick="addToFavourites"
+                    />
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/content_movie_details" />
+</android.support.design.widget.CoordinatorLayout>
